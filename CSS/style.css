@@ -103,6 +103,17 @@ ul{
   color: #333333;
 }  
 
+.menu:hover{
+  font-size: 20px;
+  background-color: #Ec686c;
+  opacity: 70%;
+  padding: 2px;
+}
+
+.rosaResaltado:hover{
+  color: #333333;
+}
+
 .contenedor-iconos{
   display: flex;
   flex-direction: row;

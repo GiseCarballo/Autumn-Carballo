@@ -3,9 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Autumn Deco</title>
 
+<!-- Boostrap CSS-->
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+
+<!-- Mi CSS-->
     <link rel="stylesheet" href="CSS/style.css">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -21,52 +26,109 @@
 </head>
 <body>
     <div id="principal">
-        <header>
-            <div class="contenedor-header">
-                <i id="burgerMenu" class="fa-solid fa-bars"></i>
-                <img src="../images/LogoAutumn.gif" alt="Logo" width="55px" height="55px" class="logo">
-                
-                <i class="fa-solid fa-magnifying-glass buscador"></i>
-                <!-- futuro buscador -->
-            </div>
+        <header class="contenedor-header">
+            <nav class="navbar">
+                <div class="container-fluid">
+                  <img src="images/LogoAutumn.gif" alt="logo" width="55px" height="55px" class="logo">
+                  <form class="d-flex" role="search">
+                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                    </form><i class="fa-solid fa-magnifying-glass buscador"></i>
+                </div>
+              </nav>
         </header>
 
-        <nav>
-            <div class="contenedor-nav">
-                    <ul>
-                        <li class="menu"><a href="index.html" class="rosaResaltado">Home</a></li>
-                        <li class="menu"><a href="pages/taller.html" >Taller</a></li>
-                        <li class="menu"><a href="pages/juegos.html" >Juegos
-                            <ul> <!-- Luego se harán categorías-->
-                                <li><a href="juegos.html" >Bloques</a></li>
-                                <li><a href="juegos.html" >Encastre</a></li>
-                                <li><a href="juegos.html" >Ingenio</a></li>
-                            </ul>
-                        </a></li>
-                        <li class="menu"><a href="pages/deco.html">Deco
-                            <ul> <!-- Luego se harán categorías-->
-                                <li><a href="deco.html">Baño</a></li>
-                                <li><a href="deco.html">Cocina</a></li>
-                                <li><a href="deco.html">Living</a></li>
-                            </ul>
-                        </a></li>
-                        <li class="menu"><a href="pages/contacto.html">Contacto</a></li>
-                    
-
-                         <div class="contenedor-iconos">    
-                            <a href="https://autumndeco.empretienda.com.ar"><i class="fa-solid fa-cart-shopping icono"></a></i>
-                            <a href="https://www.instagram.com/autumn.deco_"><i class="fa-brands fa-instagram icono"></a></i>
-                        </div>
-                    </ul>    
-            </div>
-        </nav>
-        
-        <article>
-            <div class="contenedor-home">
-                <div class="contenedor-titulo">
-                    <h1 class="tituloPrincipal">Juegos didácticos y decoración sustentable</h1>
+        <nav> 
+            <div class="container-fluid row">
+              <div class="navbar navbar-expand-lg">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link" id="active" aria-current="page" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="pages/taller.html">Taller</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="pages/juegos.html" role="button">Juegos</a>
+                        <ul class="dropdown-menu">
+                        <li><a class="nav-link" href="pages/juegos.html">Bloques</a></li>
+                        <li><a class="nav-link" href="pages/juegos.html">Encastre</a></li>
+                        <li><a class="nav-link" href="pages/juegos.html">Ingenio</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="pages/deco.html" role="button">Deco</a>
+                        <ul class="dropdown-menu">
+                        <li><a class="nav-link" href="pages/deco.html">Baño</a></li>
+                        <li><a class="nav-link" href="pages/deco.html">Cocina</a></li>
+                        <li><a class="nav-link" href="pages/deco.html">Living</a></li>
+                    </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="pages/contacto.html">Contacto</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="https://autumndeco.empretienda.com.ar"><i class="fa-solid fa-cart-shopping icono"></a></i>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="https://www.instagram.com/autumn.deco_"><i class="fa-brands fa-instagram icono"></a></i>
+                    </li>
+                    </ul>
                 </div>
-            </div>     
+                </div>
+             </div>   
+          </nav>
+
+        <article>
+            <div class="container-fluid">
+                <div class="row col-sm-12 col-md-12 col-xl-12">
+                    <div id="carouselExampleDark" class="carousel carousel-dark slide" data-bs-ride="carousel">
+                        <div class="carousel-indicators">
+                          <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                          <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                          <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                          <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="3" aria-label="Slide 4"></button>
+                        </div>
+                        <div class="carousel-inner">
+                          <div class="carousel-item active" data-bs-interval="10000">
+                            <img src="/images/Carousel Domino.jpg" class="d-block w-100" alt="domino">
+                            <div class="carousel-caption d-none d-md-block">
+                              <h2>Juegos didácticos y decoración sustentable</h2>
+                            </div>
+                          </div>
+                          <div class="carousel-item" data-bs-interval="2000">
+                            <img src="/images/Carousel artesanal.jpg" class="d-block w-100" alt="artesanal">
+                            <div class="carousel-caption d-none d-md-block">
+                              <h2>Trabajo artesanal, diseños únicos e irrepetibles</h2>
+                            </div>
+                          </div>
+                          <div class="carousel-item">
+                            <img src="/images/Carousel tren.jpg" class="d-block w-100" alt="tren">
+                            <div class="carousel-caption d-none d-md-block">
+                              <h2>Para aprender jugando</h2>
+                            </div>
+                          </div>
+                          <div class="carousel-item">
+                            <img src="/images/Carousel jabonera.jpg" class="d-block w-100" alt="jabonera">
+                            <div class="carousel-caption d-none d-md-block">
+                              <h2>Decoraciones sustentables, ecológicas y de Tendencia</h2>
+                            </div>
+                          </div>
+                        </div>
+                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="prev">
+                          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                          <span class="visually-hidden">Previous</span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="next">
+                          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                          <span class="visually-hidden">Next</span>
+                        </button>
+                      </div>
+                </div>
+            </div>
         </article>
 
         <footer>
@@ -86,6 +148,8 @@
         </div>        
         </footer> 
     </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
 
    <script src="https://kit.fontawesome.com/0ab5483adf.js" crossorigin="anonymous"></script>
 </body>

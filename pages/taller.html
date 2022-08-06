@@ -25,46 +25,52 @@
 </head>
 <body>
 	<div id="taller">
-		<header>
-            <div class="contenedor-header">
-                <i id="burgerMenu" class="fa-solid fa-bars"></i>
-                <img src="../images/LogoAutumn.gif" alt="Logo" width="55px" height="55px" class="logo">
-                
-                <i class="fa-solid fa-magnifying-glass buscador"></i>
-                <!-- futuro buscador -->
-            </div>
-        </header>
-		
-        <nav>
-            <div class="contenedor-nav">
-                    <ul>
-                        <li class="menu"><a href="../index.html">Home</a></li>
-                        <li class="menu"><a href="taller.html" class="rosaResaltado">Taller</a></li>
-                        <li class="menu"><a href="juegos.html" >Juegos
-                            <ul> <!-- Luego se harán categorías-->
-                                <li><a href="juegos.html" >Bloques</a></li>
-                                <li><a href="juegos.html" >Encastre</a></li>
-                                <li><a href="juegos.html" >Ingenio</a></li>
-                            </ul>
-                        </a></li>
-                        <li class="menu"><a href="deco.html">Deco
-                            <ul> <!-- Luego se harán categorías-->
-                                <li><a href="deco.html">Baño</a></li>
-                                <li><a href="deco.html">Cocina</a></li>
-                                <li><a href="deco.html">Living</a></li>
-                            </ul>
-                        </a></li>
-                        <li class="menu"><a href="/contacto.html">Contacto</a></li>
-                    
+        <header>
+			<nav class="navbar navbar-expand-lg">
+			  <div class="container-fluid">
+				<img src="../images/LogoAutumn.gif" alt="logo" width="55px" height="55px" class="logo">
+				<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+				  <span class="navbar-toggler-icon"></span>
+				</button>
+				<div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+					<ul class="navbar-nav me-auto mb-2 mb-lg-0">
+						<li class="nav-item">
+							<a class="nav-link" aria-current="page" href="../index.html">Home</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link"  id="active" href="taller.html">Taller</a>
+						</li>
+						<li class="nav-item dropdown">
+							<a class="nav-link dropdown-toggle" href="juegos.html" role="button">Juegos</a>
+							<ul class="dropdown-menu">
+							<li><a class="nav-link" href="juegos.html">Bloques</a></li>
+							<li><a class="nav-link" href="juegos.html">Encastre</a></li>
+							<li><a class="nav-link" href="juegos.html">Ingenio</a></li>
+							</ul>
+						</li>
+						<li class="nav-item dropdown">
+							<a class="nav-link dropdown-toggle" href="deco.html" role="button">Deco</a>
+							<ul class="dropdown-menu">
+							<li><a class="nav-link" href="deco.html">Baño</a></li>
+							<li><a class="nav-link" href="deco.html">Cocina</a></li>
+							<li><a class="nav-link" href="deco.html">Living</a></li>
+						</ul>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link"  href="contacto.html">Contacto</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="https://autumndeco.empretienda.com.ar"><i class="fa-solid fa-cart-shopping icono"></a></i>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="https://www.instagram.com/autumn.deco_"><i class="fa-brands fa-instagram icono"></a></i>
+						</li>
+					</ul>
+				</div>
+			  </div>
+			</nav>
+		</header>
 
-                         <div class="contenedor-iconos">    
-                            <a href="https://autumndeco.empretienda.com.ar"><i class="fa-solid fa-cart-shopping icono"></a></i>
-                            <a href="https://www.instagram.com/autumn.deco_"><i class="fa-brands fa-instagram icono"></a></i>
-                        </div>
-                    </ul>    
-            </div>
-        </nav>
-	
 		<section>
 			<div class="contenedor-taller">
 				<div class="contenedor-texto container-fluid">
@@ -82,21 +88,24 @@
 		</section>
 
         <footer>
-			<div class="contenedor-footer">
-				<div class="contenedorPuzzle">
-					<i class="fa-solid fa-puzzle-piece"></i>
-				</div>
-				<div class="contenedorDatos">
-						<h4>Creaciones por: Gisela Carballo</h4>
-						<h4>Sólo venta online</h4></div>
-				<div class="contenedorInfo">
-					<h4>Información de contacto</h4>
-						<h5>Wpp: 011 15 6733 2924</h5>
-						<h5>Email: giselacarballo3@gmail.com</h5>
-						<h5>Instagram: /Autumn.deco_</h5>
-				</div>
-			</div>        
-		</footer> 
+            <div class="contenedor-footer">
+                <div class="contenedorPuzzle">
+                    <i class="fa-solid fa-puzzle-piece"></i>
+                </div>
+                <div class="contenedorDatos">
+                        <h5>Creaciones por: Gisela Carballo</h5>
+                        <h5>Sólo venta online</h5></div>
+                <div class="contenedorInfo">
+                    <h5>Información de contacto</h5>
+                        <h6>Wpp: 011 15 6733 2924</h6>
+                        <h6>Email: giselacarballo3@gmail.com</h6>
+                        <h6>Instagram: /Autumn.deco_</h6>
+                </div>
+                <div class="copyright">
+                  <h6>© 2022 Todos los derechos reservados | Autumn Deco</h6>
+                </div>
+            </div>        
+        </footer> 
 	</div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
 

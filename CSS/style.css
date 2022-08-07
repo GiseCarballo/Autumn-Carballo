@@ -33,6 +33,16 @@ footer{
   grid-area: footer;
 }
 
+.contenedor-titulo-juegos{
+  grid-area: titulouegos;
+}
+
+.contenedor-titulo-deco{
+  grid-area: titulodeco;
+}
+
+
+
 /* ----------- NAV ----------- */
 
 li {
@@ -192,10 +202,10 @@ li {
   background-color: #Ec686c;
   opacity: 90%;
   border-radius: 50px 2px 50px 2px;
-  width: 80%;
+  width: 100%;
 }
 
-.card-img-top{
+.img-juegos{
 padding: 10%;
 padding-bottom: 3%;
 border-radius: 10%;
@@ -228,31 +238,64 @@ border-radius: 10%;
   color: #FEF9EF;
   font-family: 'Montserrat', sans-serif;
   font-weight: 300;
-  font-size: 2em;
   text-transform: uppercase;
   text-align :center;
   border-radius: 5px;
-  width: 50%;
-  margin:auto;
 }
 
   /* ----------- html DECO ----------- */
 
+.tituloDeco{
+  background-color: #ffcb77;
+  opacity: 60%;
+  color: #333333;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 300;
+  text-transform: uppercase;
+  text-align :center;
+  border-radius: 5px;
+  padding: 1%;
+}
+
+.card-deco{
+  background-color: #ffcb77;
+  opacity: 90%;
+  border-radius: 2px 50px 2px 50px;
+  width: 90%;
+  border: none;
+}
+
+.img-deco{
+  border-radius: 2%;
+}
+
   /* ----------- html Contacto ----------- */
 
 .contacto{
-  display: grid;
   grid-area: contacto;
   background-color: #09ccda;
-  padding: 1% 0% 1% 5%;
+  padding: 2% 0% 2% 5%; 
   border-radius: 5px 120px 5px 120px;
+  margin-left: 10%;
 }
 
 .contenedor-maps{
-  display: grid;
   grid-area: mapa;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 15%;
 }
- 
+
+.gratis{
+ color: #044969;
+}
+
+.info{
+ color: #084d6d;
+}
+
  /* ----------------------------------------- Estilos Mobile -----------------------------------------*/
 
 
@@ -279,27 +322,27 @@ border-radius: 10%;
   width: 100%;
   display:grid;
   grid-template-columns: auto;
-  grid-template-rows: 0.3fr auto 2fr;
+  grid-template-rows: 0.3fr 0.3fr auto 2fr;
   row-gap: 6px;
-  grid-template-areas: "header" "nav" "titulo" "juegos" "footer"
+  grid-template-areas: "header" "titulojuegos" "juegos" "footer"
 }
 
 #deco{
   width: 100%;
   display:grid;
   grid-template-columns: auto;
-  grid-template-rows: 7% auto 15%;
+  grid-template-rows: 0.3fr 0.3fr auto 2fr;
   row-gap: 6px;
-  grid-template-areas: "header" "taller" "footer";
+  grid-template-areas: "header" "titulodeco" "deco" "footer";
 }
 
 #contacto{
   width: 100%;
   display:grid;
   grid-template-columns: auto;
-  grid-template-rows: 7% auto 15%;
+  grid-template-rows: 0.3fr auto auto 2fr;
   row-gap: 6px;
-  grid-template-areas: "header" "taller" "footer";
+  grid-template-areas: "header" "contacto" "mapa" "footer";
 }
 
 /*--------------------------------------------*/
@@ -339,6 +382,56 @@ border-radius: 10%;
   max-width: 250px;
   height: auto;
 }
+
+/*--------------------------------------------*/
+
+.tituloJuegos {
+  width: 80%;
+  margin:auto;
+  font-size: 1.5em;
+}
+
+.card-juegos{
+margin-bottom: 8px;
+}
+
+/*--------------------------------------------*/
+
+.tituloDeco {
+  width: 80%;
+  margin:auto;
+  font-size: 1.5em;
+}
+
+.card-deco{
+margin-bottom: 8px;
+}
+
+.img-deco{
+  padding: 2%;
+  padding-bottom: 3%;
+}
+
+.card-deco{
+  width: 100%;
+}
+
+
+/*--------------------------------------------*/
+
+.contacto{
+  border-radius: 5px 80px 5px 80px;
+  margin-left: 2%;
+  margin-right: 2%;
+  padding-right: 2%;
+  padding-bottom: 10%;
+}
+
+.contenedor-maps{
+  padding-top: 2%;
+  padding-right: 0%;
+}
+
 
 /*--------------------------------------------*/
 
@@ -413,6 +506,7 @@ border-radius: 10%;
     grid-template-columns: 2fr 1fr;
     grid-template-rows: 1fr auto 2fr;
     row-gap:2%;
+    column-gap: 5%;
     grid-template-areas: "header header" "contacto mapa" "footer footer";
   }
 
@@ -451,6 +545,52 @@ border-radius: 10%;
 }
 
 /*--------------------------------------------*/
+
+.tituloJuegos {
+  width: 50%;
+  margin:auto;
+  font-size: 2em;
+}
+
+.card-deco{
+  margin-bottom: 0px;
+  }
+
+/*--------------------------------------------*/
+
+
+.tituloDeco {
+  width: 50%;
+  margin:auto;
+  font-size: 2em;
+}
+
+.card-deco{
+margin-bottom: 8px;
+}
+
+.img-deco{
+  padding: 0%;
+  padding-bottom: 2%;
+}
+
+.card-deco{
+  width: 90%;
+}
+
+/*--------------------------------------------*/
+
+.contacto{
+  padding-bottom: 2%;
+}
+
+.contenedor-maps{
+  padding-top: 15%;
+  padding-right: 15%;
+}
+
+/*--------------------------------------------*/
+
 .contenedor-footer{
   border-radius: 0px 90px 0px 90px;
   padding: 10px 30px 10px 40px;

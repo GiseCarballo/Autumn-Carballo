@@ -1,0 +1,184 @@
+@media screen and (min-width: 320px) and (max-width: 719px){
+  
+    #principal{
+      display:grid;
+      grid-template-columns: auto;
+      grid-template-rows: 0.3fr auto 2fr;
+      row-gap: 5px;
+      grid-template-areas: "header" "home" "footer";
+    }
+  
+    #taller{
+      width: 100%;
+      display:grid;
+      grid-template-columns: auto;
+      grid-template-rows: 0.3fr auto 2fr;
+      row-gap: 6px;
+      grid-template-areas: "header" "taller" "info" "footer";
+  }
+  
+  #juegos{
+    width: 100%;
+    display:grid;
+    grid-template-columns: auto;
+    grid-template-rows: 0.3fr 0.3fr auto 2fr;
+    row-gap: 6px;
+    grid-template-areas: "header" "titulojuegos" "juegos" "footer"
+  }
+  
+  #deco{
+    width: 100%;
+    display:grid;
+    grid-template-columns: auto;
+    grid-template-rows: 0.3fr 0.3fr auto 2fr;
+    row-gap: 6px;
+    grid-template-areas: "header" "titulodeco" "deco" "footer";
+  }
+  
+  #contacto{
+    width: 100%;
+    display:grid;
+    grid-template-columns: auto;
+    grid-template-rows: 0.3fr auto auto 2fr;
+    row-gap: 6px;
+    grid-template-areas: "header" "contacto" "mapa" "footer";
+  }
+  
+  /*--------------------------------------------*/
+  
+  .contenedor-burguer{
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      text-align: center;
+  }
+  
+  .vr{
+      display: none;
+  }
+  
+  /*--------------------------------------------*/
+  .contenedor-taller {
+    border-radius: 0px 80px 0px 80px; 
+    grid-template-rows: 2fr 1fr;
+    grid-template-columns: auto;
+    width: 90%;
+    margin: auto;
+  }
+  
+  .contenedor-texto{
+    width: 100%;
+    justify-content: space-between;
+  }
+  
+  .texto {
+    font-size: 1.3em;
+    width: 100%;
+    line-height: 1.5;
+    margin: 2% 0% 2% 0%;
+  }  
+  
+  .hola{
+    padding-right: 0%;
+    margin: 3% 0% 2% 0%;
+    width: 80%;
+    line-height: 1.5;
+  }
+  
+  .contenedor-imagen{
+    justify-content: center;
+    margin-top: 5%;
+    margin-bottom: 5%;
+  }
+  
+  .cohete{
+    max-width: 250px;
+    height: auto;
+  }
+  
+  /*--------------------------------------------*/
+  
+  .tituloJuegos {
+    width: 80%;
+    margin:auto;
+    font-size: 1.5em;
+  }
+  
+  .card-juegos{
+  margin-bottom: 8px;
+  }
+  
+  /*--------------------------------------------*/
+  
+  .tituloDeco {
+    width: 80%;
+    margin:auto;
+    font-size: 1.5em;
+  }
+  
+  .card-deco{
+  margin-bottom: 8px;
+  }
+  
+  .img-deco{
+    padding: 2%;
+    padding-bottom: 3%;
+  }
+  
+  .card-deco{
+    width: 100%;
+  }
+  
+  
+  /*--------------------------------------------*/
+  
+  .contacto{
+    border-radius: 5px 80px 5px 80px;
+    margin-left: 2%;
+    margin-right: 2%;
+    padding-right: 2%;
+    padding-bottom: 10%;
+  }
+  
+  .contenedor-maps{
+    padding-top: 2%;
+    padding-right: 0%;
+  }
+  
+  .maps{
+    width: 100%;
+    margin:auto;
+  }
+  
+  /*--------------------------------------------*/
+  
+  .contenedor-footer{
+    border-radius: 0px 50px 0px 50px;
+    padding: 10px 30px 20px 40px;
+    grid-template-columns: auto;
+    grid-template-rows: 1fr 1fr 2fr 1fr;
+    grid-template-areas: "puzzle" "texto1" "texto2" "derechos";
+    row-gap: 5px;
+  }
+  
+  .contenedorPuzzle {
+     text-align: center;
+   }
+   
+   .contenedorDatos {
+    text-align: left;
+    width: 100%;
+    margin: auto;
+   }
+   
+   .contenedorInfo {
+    text-align: left;
+    width: 100%;
+    margin: auto;
+   }
+   
+   .copyright{
+      text-align:center;
+   }
+  }
+  

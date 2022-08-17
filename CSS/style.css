@@ -90,6 +90,9 @@ ul li:hover ul {
   color: #Ec686c;
   font-size: 1.5em;
 }
+.icono:hover {
+  color: #333333;
+}
 
 #active {
   color: #Ec686c;
@@ -635,4 +638,13 @@ ul li:hover ul {
     text-align: center;
     width: 100%;
   }
+}
+/*------------------------------------------ MAPA ------------------------------------------*/
+/*---------------------------------------- BUCLE EACH ----------------------------------------*/
+.juegos {
+  background-color: #e74c51;
+}
+
+.deco {
+  background-color: #e74c51;
 }/*# sourceMappingURL=style.css.map */

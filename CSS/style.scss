@@ -21,17 +21,22 @@ li {
  }
   
 header{
-  display:grid;
   grid-area: header;
 }
 
-.contenedor-article{
-  display:grid;
-  grid-area:article;
+.buttons{
+  grid-area: buttons;
+}
+
+.contenedor-carousel{
+  grid-area: carousel;
+ }
+
+.contenedor-botones{
+  grid-area: botones;
 }
 
 footer{
-  display:grid;
   grid-area: footer;
 }
 
@@ -93,6 +98,9 @@ li {
  .icono{
    color: $colorPrincipal;
    font-size: 1.5em;
+   &:hover{
+    color:#333333
+   }
  }
 
  #active {
@@ -156,7 +164,6 @@ li {
 
 /* ----------- html home ----------- */
 
-
  .caption{
   color: $colorSecundario;
   text-transform: uppercase;
@@ -178,7 +185,6 @@ li {
   height: auto;
   margin:auto;
  }
-
 
 
 /* ----------- html taller ----------- */
@@ -357,7 +363,7 @@ border-radius: 10%;
  /* ----------------------------------------- Estilos Mobile -----------------------------------------*/
  
  @media screen and (orientation:portrait){
-    .contenedor-article{
+    .contenedor-carousel-desktop{
       display: none;
     }
    }
@@ -374,5 +380,27 @@ border-radius: 10%;
 
   @import "desktop";
   
+
+
+/*------------------------------------------ MAPA ------------------------------------------*/
+
+$buttons:(juegos: #e74c51, deco:#fcbf5e);
+
+/*---------------------------------------- BUCLE EACH ----------------------------------------*/
+
+@each $producto, $color in $buttons{
+.#{$producto} {
+  background-color: #e74c51;
+}
+}
+
+/*---------------------------------------- MAP GET----------------------------------------*/
+
+.clase{
+  background-color: map-get($producto, juegos);
+}
+
+
+/*---------------------------------------- EXTEND----------------------------------------*/
 
 

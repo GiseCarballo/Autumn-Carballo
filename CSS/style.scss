@@ -163,10 +163,14 @@ li {
 }
 
 /* ----------- html home ----------- */
+.btn{
+  text-align: center;
+  background-color: #ffffffa8; 
+  color:#054b6b;
+}
 
  .caption{
   color: $colorSecundario;
-  text-transform: uppercase;
   text-align: center;
   font-family: 'Montserrat', sans-serif;
   background-color: #ffffffa8; 
@@ -272,7 +276,6 @@ border-radius: 10%;
 }
 
 .card-title{
-  text-transform: uppercase;
   color:#FFFFFF;
   font-family: 'Manrope', sans-serif;
   text-align: center;
@@ -306,14 +309,10 @@ border-radius: 10%;
   /* ----------- html DECO ----------- */
 
 .tituloDeco{
+  @extend .tituloJuegos;
   background-color: #ffcb77;
   opacity: 60%;
   color: #333333;
-  font-family: 'Montserrat', sans-serif;
-  font-weight: 300;
-  text-transform: uppercase;
-  text-align :center;
-  border-radius: 5px;
   padding: 1%;
 }
 
@@ -341,6 +340,7 @@ border-radius: 10%;
   padding: 2% 0% 2% 5%; 
   border-radius: 5px 120px 5px 120px;
   margin-left: 10%;
+  box-shadow: 10px 10px 10px grey;
 }
 
 .contenedor-maps{
@@ -382,25 +382,44 @@ border-radius: 10%;
   
 
 
-/*------------------------------------------ MAPA ------------------------------------------*/
+/*---------------------------------------- MAPS ----------------------------------------*/
 
-$buttons:(juegos: #e74c51, deco:#fcbf5e);
+$mapaColoresProductos: (jg: #Ec686c, dc:#fcbf5e);
 
-/*---------------------------------------- BUCLE EACH ----------------------------------------*/
+/* -------------------------------------- MAP GET --------------------------------------*/ 
 
-@each $producto, $color in $buttons{
-.#{$producto} {
-  background-color: #e74c51;
-}
-}
-
-/*---------------------------------------- MAP GET----------------------------------------*/
-
-.clase{
-  background-color: map-get($producto, juegos);
+.jg{
+  border-color: map-get($mapaColoresProductos, jg);
 }
 
 
-/*---------------------------------------- EXTEND----------------------------------------*/
+/* ------------------------------------ BUCLE EACH ------------------------------------*/ 
+
+@each $product, $color in $mapaColoresProductos {
+  .#{$product}{
+      border-color: $color;
+}
+}
+
+/*---------------------------------------- MIXIN SIN PARAMETROS---------------------------------------*/
+
+@mixin  mayuscula {
+  text-transform: uppercase;
+}
+
+.caption{
+  @include mayuscula;
+}
+
+/*---------------------------------------- MIXIN CON PARAMETROS---------------------------------------*/
 
 
+@mixin border-shadow ($style, $color){
+  box-shadow: $style;
+  box-shadow: $color;
+
+}
+
+.card-deco .card-juegos{
+  @include border-shadow(5px 5px 10px, grey)
+}

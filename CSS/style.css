@@ -19,17 +19,22 @@ li {
 }
 
 header {
-  display: grid;
   grid-area: header;
 }
 
-.contenedor-article {
-  display: grid;
-  grid-area: article;
+.buttons {
+  grid-area: buttons;
+}
+
+.contenedor-carousel {
+  grid-area: carousel;
+}
+
+.contenedor-botones {
+  grid-area: botones;
 }
 
 footer {
-  display: grid;
   grid-area: footer;
 }
 
@@ -150,9 +155,14 @@ ul li:hover ul {
 }
 
 /* ----------- html home ----------- */
+.btn {
+  text-align: center;
+  background-color: rgba(255, 255, 255, 0.6588235294);
+  color: #054b6b;
+}
+
 .caption {
   color: #22769D;
-  text-transform: uppercase;
   text-align: center;
   font-family: "Montserrat", sans-serif;
   background-color: rgba(255, 255, 255, 0.6588235294);
@@ -254,7 +264,6 @@ ul li:hover ul {
 }
 
 .card-title {
-  text-transform: uppercase;
   color: #FFFFFF;
   font-family: "Manrope", sans-serif;
   text-align: center;
@@ -274,7 +283,7 @@ ul li:hover ul {
   font-size: 1em;
 }
 
-.tituloJuegos {
+.tituloJuegos, .tituloDeco {
   background-color: #22769D;
   opacity: 60%;
   color: #FEF9EF;
@@ -290,11 +299,6 @@ ul li:hover ul {
   background-color: #ffcb77;
   opacity: 60%;
   color: #333333;
-  font-family: "Montserrat", sans-serif;
-  font-weight: 300;
-  text-transform: uppercase;
-  text-align: center;
-  border-radius: 5px;
   padding: 1%;
 }
 
@@ -321,6 +325,7 @@ ul li:hover ul {
   padding: 2% 0% 2% 5%;
   border-radius: 5px 120px 5px 120px;
   margin-left: 10%;
+  box-shadow: 10px 10px 10px grey;
 }
 
 .contenedor-maps {
@@ -342,7 +347,7 @@ ul li:hover ul {
 
 /* ----------------------------------------- Estilos Mobile -----------------------------------------*/
 @media screen and (orientation: portrait) {
-  .contenedor-article {
+  .contenedor-carousel-desktop {
     display: none;
   }
 }
@@ -436,7 +441,7 @@ ul li:hover ul {
     height: auto;
   }
   /*--------------------------------------------*/
-  .tituloJuegos {
+  .tituloJuegos, .tituloDeco {
     width: 80%;
     margin: auto;
     font-size: 1.5em;
@@ -507,9 +512,9 @@ ul li:hover ul {
     width: 100%;
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: 1fr auto 2fr;
+    grid-template-rows: 1fr 1fr auto 2fr;
     row-gap: 2%;
-    grid-template-areas: "header" "article" "footer";
+    grid-template-areas: "header" "botones" "carousel" "footer";
   }
   #taller {
     width: 100%;
@@ -581,7 +586,7 @@ ul li:hover ul {
     height: auto;
   }
   /*--------------------------------------------*/
-  .tituloJuegos {
+  .tituloJuegos, .tituloDeco {
     width: 50%;
     margin: auto;
     font-size: 2em;
@@ -639,12 +644,28 @@ ul li:hover ul {
     width: 100%;
   }
 }
-/*------------------------------------------ MAPA ------------------------------------------*/
-/*---------------------------------------- BUCLE EACH ----------------------------------------*/
-.juegos {
-  background-color: #e74c51;
+/*---------------------------------------- MAPS ----------------------------------------*/
+/* -------------------------------------- MAP GET --------------------------------------*/
+.jg {
+  border-color: #Ec686c;
 }
 
-.deco {
-  background-color: #e74c51;
+/* ------------------------------------ BUCLE EACH ------------------------------------*/
+.jg {
+  border-color: #Ec686c;
+}
+
+.dc {
+  border-color: #fcbf5e;
+}
+
+/*---------------------------------------- MIXIN SIN PARAMETROS---------------------------------------*/
+.caption {
+  text-transform: uppercase;
+}
+
+/*---------------------------------------- MIXIN CON PARAMETROS---------------------------------------*/
+.card-deco .card-juegos {
+  box-shadow: 5px 5px 10px;
+  box-shadow: grey;
 }/*# sourceMappingURL=style.css.map */

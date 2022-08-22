@@ -246,6 +246,14 @@ ul li:hover ul {
 }
 
 /* ----------- html JUEGOS----------- */
+.filtros {
+  filter: grayscale(100%);
+  transition: 0, 5s;
+}
+.filtros:hover {
+  filter: none;
+}
+
 .card-juegos {
   background-color: #Ec686c;
   opacity: 90%;

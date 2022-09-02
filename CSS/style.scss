@@ -48,11 +48,21 @@ footer{
   grid-area: titulodeco;
 }
 
-.juegos{
-  grid-area:juegos;
+/* ----------- NAV ----------- */
+
+/*
+header{
+position: fixed;
+z-index: 100;
 }
 
-/* ----------- NAV ----------- */
+section{
+  padding-top: 70px;
+}*/
+
+.logo{
+  width: 65px;
+}
 
 li {
     display: inline-block;
@@ -71,7 +81,7 @@ li {
  }
 
 #active:hover{
-  color: #313131;
+  color: $colorLetra;
 }
 
  .navbar{
@@ -312,6 +322,55 @@ border-radius: 10%;
   text-transform: uppercase;
   text-align :center;
   border-radius: 5px;
+}
+  /* ----------- html CATEGORIA-JUEGOS ----------- */
+
+section{
+  grid-area: juegos;
+}
+
+.lista-beneficios{
+  line-height: 1.9;
+}
+
+.lista-beneficios, .card-text{
+  font-family: 'Montserrat', sans-serif;
+  color:rgb(22, 22, 22);  
+}
+
+.lista-beneficios, .card-text, .card-title-categoria{
+  margin-right: 4%;
+  margin-left: 4%;
+}
+
+.titulo1{
+  color: $colorLetra;
+  font-family: 'Manrope', sans-serif;
+  font-size: 1.4rem;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+}
+
+.card-title-categoria{
+  color: $colorLetra;
+  font-family: 'Manrope', sans-serif;
+  font-size: 2.5rem;
+  padding-bottom: 2%;
+}
+
+.card1{
+  margin: auto;
+  border-color: white;
+}
+
+.edad{
+  text-align: center;
+  background-color: #e4e4e4;
+  color: $colorLetra;
+}
+
+.c2{
+  padding-bottom: 5%;
 }
 
   /* ----------- html DECO ----------- */

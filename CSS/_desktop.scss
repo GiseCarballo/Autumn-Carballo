@@ -4,16 +4,16 @@
       width: 100%;
       display:grid;
       grid-template-columns: 1fr;
-      grid-template-rows: 1fr 1fr auto 2fr;
-      row-gap: 2%;
-      grid-template-areas: "header" "botones" "carousel" "footer";
+      grid-template-rows: 2fr;
+      row-gap: 1%;
+      grid-template-areas: "header" "botones" "carousel" "jugando" "footer";
    }
   
     #taller{
       width: 100%;
       display:grid;
       grid-template-columns: 1fr;
-      grid-template-rows: 1fr auto auto 2fr;
+      grid-template-rows: auto 2fr;
       row-gap: 2%;
       grid-template-areas: "header" "taller" "info" "footer";
   }
@@ -21,23 +21,23 @@
     #juegos{
       display:grid;
       grid-template-columns: 1fr;
-      grid-template-rows: 1fr 1fr auto 2fr;
-      row-gap: 2%;
-      grid-template-areas: "header" "titulojuegos" "juegos" "footer";
+      grid-template-rows: auto 2fr;
+      row-gap: 0.3%;
+      grid-template-areas: "header" "titulojuegos" "juegos" "categoriaJuegos" "footer";
     }
   
     #deco{
       display:grid;
       grid-template-columns: 1fr;
-      grid-template-rows: 1fr 1fr auto 2fr;
-      row-gap: 2%;
+      grid-template-rows: auto 2fr;
+      row-gap: 3%;
       grid-template-areas: "header" "titulodeco" "deco" "footer";
     }
   
     #contacto{
       display:grid;
       grid-template-columns: 2fr 1fr;
-      grid-template-rows: 1fr auto 2fr;
+      grid-template-rows: auto 2fr;
       row-gap:2%;
       column-gap: 5%;
       grid-template-areas: "header header" "contacto mapa" "footer footer";
@@ -46,12 +46,19 @@
     #categoria-juegos{
       display:grid;
       grid-template-columns: 1fr;
-      grid-template-rows: 1fr auto 2fr;
+      grid-template-rows: auto 2fr;
       row-gap: 1%;
-      grid-template-areas: "header" "juegos" "footer";
+      grid-template-areas: "header" "categoriaJuegos" "footer";
     }
   /*--------------------------------------------*/
   
+header{
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
+    box-shadow: 0 3px 3px rgb(0 0 0 / 5%);
+}
+
   ul{
       display:flex;
       justify-content: end;
@@ -61,8 +68,14 @@
       display: flex;
       padding-left: 100%;
       align-items: center;
+      margin-left: 2rem;
   }
   
+   /*--------------------------------------------*/
+  .contenedor-botones{
+    margin-top: 8%;
+  }
+
   /*--------------------------------------------*/
   .contenedor-taller {
     border-radius: 0px 120px 0px 120px; 
@@ -70,38 +83,57 @@
     grid-template-rows: auto;
     width: 75%;
     margin: auto;
+    margin-top: 6%;
+    .contenedor-texto{
+      width: 100%;
+      justify-content: center;
+      height: 500px;
+      align-items: baseline;
+      .texto {
+        font-size: 1.3em;
+        width: 100%;
+        line-height: 1.5;
+        margin: 3% 0% 3% 8%;
+      }  
+      .hola{
+        padding-right: 0%;
+        margin: 3% 0% 3% 8%;
+        font-weight: 700;
+      }
+    }
   }
   
-  .contenedor-texto{
-    width: 100%;
-    justify-content: center;
-    height: 500px;
-    align-items: baseline;
-  }
-  
-  .texto {
-    font-size: 1.3em;
-    width: 100%;
-    line-height: 1.5;
-    margin: 3% 0% 3% 8%;
-  }  
-  
-  .hola{
-    padding-right: 0%;
-    margin: 3% 0% 3% 8%;
-  }
   
   .cohete{
     max-width: 350px;
     height: auto;
   }
   
+.section-info{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  padding-top: 35px;
+  padding-bottom: 35px;
+    .craft{
+      width: 30%;
+      margin: 5px;
+    }
+}
+
+  .trabajo-artesanal{
+    video{
+      max-width: 80%;
+      margin: auto;
+     }
+  }
   /*--------------------------------------------*/
   
   .tituloJuegos {
     width: 50%;
     margin:auto;
     font-size: 2em;
+    margin-top: 6%;
   }
   
   .card-deco{
@@ -109,12 +141,23 @@
     }
   
   /*--------------------------------------------*/
+
+.pagCatJuegos{
+  margin-top: 0%;
+}
+
+.pagCatjuegos1{
+  margin-top: 6%;
+}
+
+  /*--------------------------------------------*/
   
   
   .tituloDeco {
     width: 50%;
     margin:auto;
     font-size: 2em;
+    margin-top: 6%;
   }
   
   .card-deco{
@@ -134,11 +177,13 @@
   
   .contacto{
     padding-bottom: 2%;
+    margin-top: 10%;
   }
   
   .contenedor-maps{
     padding-top: 15%;
     padding-right: 15%;
+    margin-top: 10%;
   }
   
   .maps{

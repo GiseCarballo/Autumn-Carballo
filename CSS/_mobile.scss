@@ -1,29 +1,30 @@
 @media screen and (min-width: 320px) and (max-width: 719px){
   
     #principal{
+      width: 100%;
       display:grid;
       grid-template-columns: auto;
-      grid-template-rows: 0.3fr auto 2fr;
-      row-gap: 5px;
-      grid-template-areas: "header" "home" "footer";
+      grid-template-rows: auto 3fr;
+      row-gap: 1%;
+      grid-template-areas: "header" "carousel" "jugando" "footer";
     }
   
     #taller{
       width: 100%;
       display:grid;
       grid-template-columns: auto;
-      grid-template-rows: 0.3fr auto 2fr;
-      row-gap: 6px;
-      grid-template-areas: "header" "taller" "info" "footer";
+      grid-template-rows: auto 2fr;
+      row-gap: 1%;
+      grid-template-areas: "header" "taller" "info" "artesanal" "footer";
   }
   
   #juegos{
     width: 100%;
     display:grid;
     grid-template-columns: auto;
-    grid-template-rows: 0.3fr 0.3fr auto 2fr;
+    grid-template-rows:auto 1fr;
     row-gap: 6px;
-    grid-template-areas: "header" "titulojuegos" "juegos" "footer"
+    grid-template-areas: "header" "titulojuegos" "juegos" "categoriaJuegos" "footer"
   }
   
   #deco{
@@ -43,8 +44,24 @@
     row-gap: 6px;
     grid-template-areas: "header" "contacto" "mapa" "footer";
   }
+
+  #categoria-juegos{
+    width: 100%;
+    display:grid;
+    grid-template-columns: auto;
+    grid-template-rows: 0.3fr auto 2fr;
+    row-gap: 6px;
+    grid-template-areas: "header" "categoriaJuegos" "footer";
+  }
   
   /*--------------------------------------------*/
+
+  header{
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
+    box-shadow: 0 3px 3px rgb(0 0 0 / 5%);
+}
   
   .contenedor-burguer{
       display: flex;
@@ -58,42 +75,82 @@
   }
   
   /*--------------------------------------------*/
+
+.contenedor-carousel-desktop{
+  display:none;
+}
+
+.contenedor-botones{
+  display:none;
+}
+
+.contenedor-carousel-celu{
+margin-top: 55px;
+}
+
+.ninoJugando{
+  img{
+    margin:0;
+    margin-top: 1%;
+  }
+}
+
+  /*--------------------------------------------*/
+
+.section-info{
+  display: flex;
+flex-direction: row;
+justify-content: space-around;
+padding-top: 3%;
+padding-bottom: 3%;
+.craft{
+  margin: 2px;
+  width: 40%;
+  i{
+    margin-bottom: 15%;
+  }
+}
+ .craft-2{
+display:none;
+ }
+}
+
+
   .contenedor-taller {
     border-radius: 0px 80px 0px 80px; 
-    grid-template-rows: 2fr 1fr;
+    grid-template-rows: 1.8fr 1fr;
     grid-template-columns: auto;
     width: 90%;
     margin: auto;
-  }
-  
-  .contenedor-texto{
-    width: 100%;
-    justify-content: space-between;
-  }
-  
-  .texto {
-    font-size: 1.3em;
-    width: 100%;
-    line-height: 1.5;
-    margin: 2% 0% 2% 0%;
-  }  
-  
-  .hola{
-    padding-right: 0%;
-    margin: 3% 0% 2% 0%;
-    width: 80%;
-    line-height: 1.5;
-  }
-  
-  .contenedor-imagen{
-    justify-content: center;
-    margin-top: 5%;
-    margin-bottom: 5%;
-  }
-  
-  .cohete{
-    max-width: 250px;
-    height: auto;
+    margin-top: 75px;
+    .contenedor-texto{
+      width: 100%;
+      justify-content: center;
+      .texto {
+        font-size: 1.3em;
+        width: 100%;
+        line-height: 1.5;
+        margin: 2% 0% 2% 0%;
+      }  
+      .hola{
+        padding-right: 0%;
+        margin: 3% 0% 2% 0%;
+        width: 90%;
+        line-height: 1.5;
+        font-weight: 600;
+        letter-spacing: 2.5px;
+        text-align: center;
+      }
+    }
+    .contenedor-imagen{
+      justify-content: center;
+      margin-top: 5%;
+      margin-bottom: 5%;
+      .cohete{
+        max-width: 250px;
+        height: auto;
+      }
+    }
   }
   
   /*--------------------------------------------*/
@@ -106,6 +163,10 @@
   
   .card-juegos{
   margin-bottom: 8px;
+  }
+
+  .tituloJuegos {
+    margin-top: 5rem;
   }
   
   /*--------------------------------------------*/

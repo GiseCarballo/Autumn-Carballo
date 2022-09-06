@@ -22,6 +22,7 @@ li {
   
 header{
   grid-area: header;
+  width: 100%;
 }
 
 .buttons{
@@ -48,21 +49,15 @@ footer{
   grid-area: titulodeco;
 }
 
+#pagJuegos{
+  grid-area:juegos;
+}
+
+#pagCatJuegos{
+  grid-area: categoriaJuegos;
+}
+
 /* ----------- NAV ----------- */
-
-/*
-header{
-position: fixed;
-z-index: 100;
-}
-
-section{
-  padding-top: 70px;
-}*/
-
-.logo{
-  width: 65px;
-}
 
 li {
     display: inline-block;
@@ -74,7 +69,6 @@ li {
      }
   }
 }
-
  
  ul li:hover ul {
     display:block;
@@ -87,7 +81,15 @@ li {
  .navbar{
     background: rgb(222,222,222);
     background: linear-gradient(0deg, rgba(222,222,222,1) 0%, rgba(242,242,242,1) 100%);
- }
+  }
+
+.logo{
+  z-index: 1000;
+  padding-top: none;
+  position:relative;
+  width: 55px;
+  height: auto;
+}
 
  .dropdown-menu{
   background-color: rgba(233, 233, 233);
@@ -200,6 +202,34 @@ li {
   margin:auto;
  }
 
+.cardJugando{
+  grid-area: jugando;
+}
+
+ .ninoJugando{
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 50px;
+  margin-bottom: 50px;
+    h5{
+      color:$colorLetra;
+      opacity: 80%;
+      padding-bottom: 2%;
+      font-size: 1.5em;
+    }
+   p{
+    line-height: 2;
+    text-align:justify;
+    margin-top: 2%;
+    margin-bottom: 2%;
+   }
+   img{
+    margin: 5%;
+   }
+ }
+
+
+
 
 /* ----------- html taller ----------- */
 
@@ -224,13 +254,14 @@ li {
 .texto {
   text-align: left;
   width: auto;
+  font-weight: 400;
 }
 
 .hola {
   color: $colorSecundario;
   font-family: 'Manrope', sans-serif;
   text-transform: uppercase;
-  font-weight: 600;
+  font-weight: 500;
 }
 
 .cohete {
@@ -240,13 +271,8 @@ li {
 .section-info{
     background-color: $colorSecundario;
     color:#333333;
-    padding-top: 35px;
-    padding-bottom: 35px;
     display:block;
     grid-area: info;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
 }
 
 .craft{
@@ -256,8 +282,6 @@ li {
  line-height: 1.5;
  align-items: center;
  color:white;   
- width: 30%;
- margin: 5px;
 }
 
 .craft-2{
@@ -265,11 +289,23 @@ li {
  border-color:#054b6b;
 }
 
+.trabajo-artesanal{
+  grid-area:artesanal;
+  margin-left: auto;
+  margin-right: auto;
+  h5{
+    color:$colorLetra;
+  }
+   video{
+    max-width: 100%;
+    margin: auto;
+   }
+}
 
 /* ----------- html JUEGOS----------- */   
 
 .filtros{
-  filter: grayscale(100%);
+  filter: grayscale(30%);
   transition: 0,5s;
   &:hover{
       filter:none;
@@ -323,11 +359,17 @@ border-radius: 10%;
   text-align :center;
   border-radius: 5px;
 }
-  /* ----------- html CATEGORIA-JUEGOS ----------- */
 
-section{
-  grid-area: juegos;
+div .arrow {
+  margin:auto;
+  font-size: 3em;
+  position: relative;
+  &:hover{
+    font-size: 3.5em;
+  }
 }
+
+/* ----------- html CATEGORIA-JUEGOS ----------- */
 
 .lista-beneficios{
   line-height: 1.9;
@@ -372,6 +414,8 @@ section{
 .c2{
   padding-bottom: 5%;
 }
+
+
 
   /* ----------- html DECO ----------- */
 

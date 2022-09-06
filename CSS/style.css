@@ -20,6 +20,7 @@ li {
 
 header {
   grid-area: header;
+  width: 100%;
 }
 
 .buttons {
@@ -46,20 +47,15 @@ footer {
   grid-area: titulodeco;
 }
 
+#pagJuegos {
+  grid-area: juegos;
+}
+
+#pagCatJuegos {
+  grid-area: categoriaJuegos;
+}
+
 /* ----------- NAV ----------- */
-/*
-header{
-position: fixed;
-z-index: 100;
-}
-
-section{
-  padding-top: 70px;
-}*/
-.logo {
-  width: 65px;
-}
-
 li {
   display: inline-block;
 }
@@ -82,6 +78,14 @@ ul li:hover ul {
 .navbar {
   background: rgb(222, 222, 222);
   background: linear-gradient(0deg, rgb(222, 222, 222) 0%, rgb(242, 242, 242) 100%);
+}
+
+.logo {
+  z-index: 1000;
+  padding-top: none;
+  position: relative;
+  width: 55px;
+  height: auto;
 }
 
 .dropdown-menu {
@@ -191,6 +195,32 @@ ul li:hover ul {
   margin: auto;
 }
 
+.cardJugando {
+  grid-area: jugando;
+}
+
+.ninoJugando {
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+.ninoJugando h5 {
+  color: #313131;
+  opacity: 80%;
+  padding-bottom: 2%;
+  font-size: 1.5em;
+}
+.ninoJugando p {
+  line-height: 2;
+  text-align: justify;
+  margin-top: 2%;
+  margin-bottom: 2%;
+}
+.ninoJugando img {
+  margin: 5%;
+}
+
 /* ----------- html taller ----------- */
 .contenedor-taller {
   background-color: #ffcb77;
@@ -213,13 +243,14 @@ ul li:hover ul {
 .texto {
   text-align: left;
   width: auto;
+  font-weight: 400;
 }
 
 .hola {
   color: #22769D;
   font-family: "Manrope", sans-serif;
   text-transform: uppercase;
-  font-weight: 600;
+  font-weight: 500;
 }
 
 .cohete {
@@ -229,13 +260,8 @@ ul li:hover ul {
 .section-info {
   background-color: #22769D;
   color: #333333;
-  padding-top: 35px;
-  padding-bottom: 35px;
   display: block;
   grid-area: info;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
 }
 
 .craft {
@@ -245,8 +271,6 @@ ul li:hover ul {
   line-height: 1.5;
   align-items: center;
   color: white;
-  width: 30%;
-  margin: 5px;
 }
 
 .craft-2 {
@@ -254,9 +278,22 @@ ul li:hover ul {
   border-color: #054b6b;
 }
 
+.trabajo-artesanal {
+  grid-area: artesanal;
+  margin-left: auto;
+  margin-right: auto;
+}
+.trabajo-artesanal h5 {
+  color: #313131;
+}
+.trabajo-artesanal video {
+  max-width: 100%;
+  margin: auto;
+}
+
 /* ----------- html JUEGOS----------- */
 .filtros {
-  filter: grayscale(100%);
+  filter: grayscale(30%);
   transition: 0, 5s;
 }
 .filtros:hover {
@@ -311,11 +348,16 @@ ul li:hover ul {
   border-radius: 5px;
 }
 
-/* ----------- html CATEGORIA-JUEGOS ----------- */
-section {
-  grid-area: juegos;
+div .arrow {
+  margin: auto;
+  font-size: 3em;
+  position: relative;
+}
+div .arrow:hover {
+  font-size: 3.5em;
 }
 
+/* ----------- html CATEGORIA-JUEGOS ----------- */
 .lista-beneficios {
   line-height: 1.9;
 }
@@ -425,27 +467,28 @@ section {
 /* ------------------------------------------ IMPORT ------------------------------------------*/
 @media screen and (min-width: 320px) and (max-width: 719px) {
   #principal {
+    width: 100%;
     display: grid;
     grid-template-columns: auto;
-    grid-template-rows: 0.3fr auto 2fr;
-    row-gap: 5px;
-    grid-template-areas: "header" "home" "footer";
+    grid-template-rows: auto 3fr;
+    row-gap: 1%;
+    grid-template-areas: "header" "carousel" "jugando" "footer";
   }
   #taller {
     width: 100%;
     display: grid;
     grid-template-columns: auto;
-    grid-template-rows: 0.3fr auto 2fr;
-    row-gap: 6px;
-    grid-template-areas: "header" "taller" "info" "footer";
+    grid-template-rows: auto 2fr;
+    row-gap: 1%;
+    grid-template-areas: "header" "taller" "info" "artesanal" "footer";
   }
   #juegos {
     width: 100%;
     display: grid;
     grid-template-columns: auto;
-    grid-template-rows: 0.3fr 0.3fr auto 2fr;
+    grid-template-rows: auto 1fr;
     row-gap: 6px;
-    grid-template-areas: "header" "titulojuegos" "juegos" "footer";
+    grid-template-areas: "header" "titulojuegos" "juegos" "categoriaJuegos" "footer";
   }
   #deco {
     width: 100%;
@@ -463,7 +506,21 @@ section {
     row-gap: 6px;
     grid-template-areas: "header" "contacto" "mapa" "footer";
   }
+  #categoria-juegos {
+    width: 100%;
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: 0.3fr auto 2fr;
+    row-gap: 6px;
+    grid-template-areas: "header" "categoriaJuegos" "footer";
+  }
   /*--------------------------------------------*/
+  header {
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
+    box-shadow: 0 3px 3px rgba(0, 0, 0, 0.05);
+  }
   .contenedor-burguer {
     display: flex;
     flex-direction: column;
@@ -474,35 +531,70 @@ section {
     display: none;
   }
   /*--------------------------------------------*/
+  .contenedor-carousel-desktop {
+    display: none;
+  }
+  .contenedor-botones {
+    display: none;
+  }
+  .contenedor-carousel-celu {
+    margin-top: 55px;
+  }
+  .ninoJugando img {
+    margin: 0;
+    margin-top: 1%;
+  }
+  /*--------------------------------------------*/
+  .section-info {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    padding-top: 3%;
+    padding-bottom: 3%;
+  }
+  .section-info .craft {
+    margin: 2px;
+    width: 40%;
+  }
+  .section-info .craft i {
+    margin-bottom: 15%;
+  }
+  .section-info .craft-2 {
+    display: none;
+  }
   .contenedor-taller {
     border-radius: 0px 80px 0px 80px;
-    grid-template-rows: 2fr 1fr;
+    grid-template-rows: 1.8fr 1fr;
     grid-template-columns: auto;
     width: 90%;
     margin: auto;
+    margin-top: 75px;
   }
-  .contenedor-texto {
+  .contenedor-taller .contenedor-texto {
     width: 100%;
-    justify-content: space-between;
+    justify-content: center;
   }
-  .texto {
+  .contenedor-taller .contenedor-texto .texto {
     font-size: 1.3em;
     width: 100%;
     line-height: 1.5;
     margin: 2% 0% 2% 0%;
   }
-  .hola {
+  .contenedor-taller .contenedor-texto .hola {
     padding-right: 0%;
     margin: 3% 0% 2% 0%;
-    width: 80%;
+    width: 90%;
     line-height: 1.5;
+    font-weight: 600;
+    letter-spacing: 2.5px;
+    text-align: center;
   }
-  .contenedor-imagen {
+  .contenedor-taller .contenedor-imagen {
     justify-content: center;
     margin-top: 5%;
     margin-bottom: 5%;
   }
-  .cohete {
+  .contenedor-taller .contenedor-imagen .cohete {
     max-width: 250px;
     height: auto;
   }
@@ -514,6 +606,9 @@ section {
   }
   .card-juegos {
     margin-bottom: 8px;
+  }
+  .tituloJuegos, .tituloDeco {
+    margin-top: 5rem;
   }
   /*--------------------------------------------*/
   .tituloDeco {
@@ -578,36 +673,36 @@ section {
     width: 100%;
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: 1fr 1fr auto 2fr;
-    row-gap: 2%;
-    grid-template-areas: "header" "botones" "carousel" "footer";
+    grid-template-rows: 2fr;
+    row-gap: 1%;
+    grid-template-areas: "header" "botones" "carousel" "jugando" "footer";
   }
   #taller {
     width: 100%;
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: 1fr auto auto 2fr;
+    grid-template-rows: auto 2fr;
     row-gap: 2%;
     grid-template-areas: "header" "taller" "info" "footer";
   }
   #juegos {
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: 1fr 1fr auto 2fr;
-    row-gap: 2%;
-    grid-template-areas: "header" "titulojuegos" "juegos" "footer";
+    grid-template-rows: auto 2fr;
+    row-gap: 0.3%;
+    grid-template-areas: "header" "titulojuegos" "juegos" "categoriaJuegos" "footer";
   }
   #deco {
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: 1fr 1fr auto 2fr;
-    row-gap: 2%;
+    grid-template-rows: auto 2fr;
+    row-gap: 3%;
     grid-template-areas: "header" "titulodeco" "deco" "footer";
   }
   #contacto {
     display: grid;
     grid-template-columns: 2fr 1fr;
-    grid-template-rows: 1fr auto 2fr;
+    grid-template-rows: auto 2fr;
     row-gap: 2%;
     -moz-column-gap: 5%;
          column-gap: 5%;
@@ -616,11 +711,17 @@ section {
   #categoria-juegos {
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: 1fr auto 2fr;
+    grid-template-rows: auto 2fr;
     row-gap: 1%;
-    grid-template-areas: "header" "juegos" "footer";
+    grid-template-areas: "header" "categoriaJuegos" "footer";
   }
   /*--------------------------------------------*/
+  header {
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
+    box-shadow: 0 3px 3px rgba(0, 0, 0, 0.05);
+  }
   ul {
     display: flex;
     justify-content: end;
@@ -629,6 +730,11 @@ section {
     display: flex;
     padding-left: 100%;
     align-items: center;
+    margin-left: 2rem;
+  }
+  /*--------------------------------------------*/
+  .contenedor-botones {
+    margin-top: 8%;
   }
   /*--------------------------------------------*/
   .contenedor-taller {
@@ -637,41 +743,67 @@ section {
     grid-template-rows: auto;
     width: 75%;
     margin: auto;
+    margin-top: 6%;
   }
-  .contenedor-texto {
+  .contenedor-taller .contenedor-texto {
     width: 100%;
     justify-content: center;
     height: 500px;
     align-items: baseline;
   }
-  .texto {
+  .contenedor-taller .contenedor-texto .texto {
     font-size: 1.3em;
     width: 100%;
     line-height: 1.5;
     margin: 3% 0% 3% 8%;
   }
-  .hola {
+  .contenedor-taller .contenedor-texto .hola {
     padding-right: 0%;
     margin: 3% 0% 3% 8%;
+    font-weight: 700;
   }
   .cohete {
     max-width: 350px;
     height: auto;
+  }
+  .section-info {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding-top: 35px;
+    padding-bottom: 35px;
+  }
+  .section-info .craft {
+    width: 30%;
+    margin: 5px;
+  }
+  .trabajo-artesanal video {
+    max-width: 80%;
+    margin: auto;
   }
   /*--------------------------------------------*/
   .tituloJuegos, .tituloDeco {
     width: 50%;
     margin: auto;
     font-size: 2em;
+    margin-top: 6%;
   }
   .card-deco {
     margin-bottom: 0px;
+  }
+  /*--------------------------------------------*/
+  .pagCatJuegos {
+    margin-top: 0%;
+  }
+  .pagCatjuegos1 {
+    margin-top: 6%;
   }
   /*--------------------------------------------*/
   .tituloDeco {
     width: 50%;
     margin: auto;
     font-size: 2em;
+    margin-top: 6%;
   }
   .card-deco {
     margin-bottom: 8px;
@@ -686,10 +818,12 @@ section {
   /*--------------------------------------------*/
   .contacto {
     padding-bottom: 2%;
+    margin-top: 10%;
   }
   .contenedor-maps {
     padding-top: 15%;
     padding-right: 15%;
+    margin-top: 10%;
   }
   .maps {
     margin: 0%;

@@ -31,7 +31,7 @@
     width: 100%;
     display:grid;
     grid-template-columns: auto;
-    grid-template-rows: 0.3fr 0.3fr auto 2fr;
+    grid-template-rows: auto 2fr;
     row-gap: 6px;
     grid-template-areas: "header" "titulodeco" "deco" "footer";
   }
@@ -40,7 +40,7 @@
     width: 100%;
     display:grid;
     grid-template-columns: auto;
-    grid-template-rows: 0.3fr auto auto 2fr;
+    grid-template-rows: auto 5fr;
     row-gap: 6px;
     grid-template-areas: "header" "contacto" "mapa" "footer";
   }
@@ -131,6 +131,7 @@ display:none;
         width: 100%;
         line-height: 1.5;
         margin: 2% 0% 2% 0%;
+        text-align: center;        
       }  
       .hola{
         padding-right: 0%;
@@ -140,6 +141,7 @@ display:none;
         font-weight: 600;
         letter-spacing: 2.5px;
         text-align: center;
+        font-size: 2em;
       }
     }
     .contenedor-imagen{
@@ -168,6 +170,10 @@ display:none;
   .tituloJuegos {
     margin-top: 5rem;
   }
+
+  .pagCatjuegos1{
+    margin-top: 15%;
+  }
   
   /*--------------------------------------------*/
   
@@ -175,6 +181,7 @@ display:none;
     width: 80%;
     margin:auto;
     font-size: 1.5em;
+    margin-top: 3.2em;
   }
   
   .card-deco{
@@ -199,11 +206,19 @@ display:none;
     margin-right: 2%;
     padding-right: 2%;
     padding-bottom: 10%;
+    margin-top: 20%;
   }
   
   .contenedor-maps{
     padding-top: 2%;
     padding-right: 0%;
+    h5{
+      text-align: center;
+    }
+    .moto{
+      max-width: 80%;
+      padding-left: 20%;
+    }
   }
   
   .maps{

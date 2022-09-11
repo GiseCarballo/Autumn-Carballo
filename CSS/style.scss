@@ -103,16 +103,20 @@ li {
   text-decoration: none;
     &:hover{
     background-color: $colorPrincipal;
-    opacity: 75%;
+    color:#333333;
+    font-weight: 800;
     }
+}
+
+.nav-item i{
+  &:hover{
+    color: #333333;
+  }
 }
 
  .icono{
    color: $colorPrincipal;
    font-size: 1.5em;
-   &:hover{
-    color:#333333
-   }
  }
 
  #active {
@@ -293,12 +297,14 @@ li {
   grid-area:artesanal;
   margin-left: auto;
   margin-right: auto;
+  border-color: white;
   h5{
     color:$colorLetra;
   }
    video{
     max-width: 100%;
     margin: auto;
+    padding-top: 2%;
    }
 }
 
@@ -461,6 +467,7 @@ div .arrow {
   justify-content: space-between;
   align-items: center;
   padding-top: 15%;
+
 }
 
 .gratis{

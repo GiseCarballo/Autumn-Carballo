@@ -178,12 +178,20 @@ header{
   .contacto{
     padding-bottom: 2%;
     margin-top: 10%;
+    .mensaje{
+      height: 300px;
+    }
   }
   
   .contenedor-maps{
     padding-top: 15%;
     padding-right: 15%;
     margin-top: 10%;
+ 
+    .moto{
+      max-width: 80%;
+      margin-left: 3%;
+    }
   }
   
   .maps{

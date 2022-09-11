@@ -53,8 +53,12 @@ footer{
   grid-area:juegos;
 }
 
-#pagCatJuegos{
+.pagCatJuegos{
   grid-area: categoriaJuegos;
+}
+
+.pagCatJuegos1{
+  grid-area: categoriaJuegos1;
 }
 
 /* ----------- NAV ----------- */

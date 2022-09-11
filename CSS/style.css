@@ -196,7 +196,7 @@ ul li:hover ul {
 }
 
 .carousel {
-  max-width: 900px;
+  max-width: 80%;
   height: auto;
   margin: auto;
 }

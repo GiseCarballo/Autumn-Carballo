@@ -51,8 +51,12 @@ footer {
   grid-area: juegos;
 }
 
-#pagCatJuegos {
+.pagCatJuegos {
   grid-area: categoriaJuegos;
+}
+
+.pagCatJuegos1 {
+  grid-area: categoriaJuegos1;
 }
 
 /* ----------- NAV ----------- */
@@ -514,7 +518,7 @@ div .arrow:hover {
     width: 100%;
     display: grid;
     grid-template-columns: auto;
-    grid-template-rows: 0.3fr auto 2fr;
+    grid-template-rows: auto 2fr;
     row-gap: 6px;
     grid-template-areas: "header" "categoriaJuegos" "footer";
   }
@@ -752,7 +756,7 @@ div .arrow:hover {
   }
   /*--------------------------------------------*/
   .contenedor-botones {
-    margin-top: 8%;
+    margin-top: 5em;
   }
   /*--------------------------------------------*/
   .contenedor-taller {

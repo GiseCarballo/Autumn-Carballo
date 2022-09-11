@@ -235,8 +235,6 @@ display:none;
     grid-template-rows: 1fr 1fr 2fr 1fr;
     grid-template-areas: "puzzle" "texto1" "texto2" "derechos";
     row-gap: 5px;
-    position: fixed;
-    bottom: 0px;
   }
   
   .contenedorPuzzle {
